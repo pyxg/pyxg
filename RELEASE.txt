@@ -1,0 +1,5 @@
+PyXG-0.2.0
+Released 12.22.05
+Brian Granger
+bgranger@scu.edu
+

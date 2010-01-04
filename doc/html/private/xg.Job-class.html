@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>xg.Job</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css"></link>
+</head>
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="xg-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <font size="-1"><b class="breadcrumbs">
+        <a href="xg-module.html">Module&nbsp;xg</a> ::
+        Class&nbsp;Job
+      </b></font></br>
+    </td>
+    <td><table cellpadding="0" cellspacing="0">
+      <tr><td align="right"><font size="-2">[show&nbsp;private&nbsp;|&nbsp;<a href="../public/xg.Job-class.html">hide&nbsp;private</a>]</font></td></tr>
+      <tr><td align="right"><font size="-2">[<a href="frames.html"target="_top">frames</a>&nbsp;|&nbsp;<a href="xg.Job-class.html" target="_top">no&nbsp;frames</a>]</font></td></tr>
+    </table></td>
+</tr></table>
+
+<!-- =========== START OF CLASS DESCRIPTION =========== -->
+<h2 class="class">Class Job</h2>
+
+<hr/>
+
+A class for working with an Xgrid job.
+<hr/>
+
+
+<!-- =========== START OF METHOD SUMMARY =========== -->
+<table class="summary" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="summary">
+  <th colspan="2">Method Summary</th></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#__init__" class="summary-sig-name"><code>__init__</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>jobID</span>,
+          <span class=summary-sig-arg>connection</span>)</span></code>
+<br />
+An Xgrid job class.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="__repr__"></a><span class="summary-sig"><span class="summary-sig-name">__repr__</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">        Job
+</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#batch" class="summary-sig-name"><code>batch</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>specification</span>,
+          <span class=summary-sig-arg>gridID</span>,
+          <span class=summary-sig-arg>silent</span>)</span></code>
+<br />
+Submits a batch job to the specified grid.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#delete" class="summary-sig-name"><code>delete</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Deletes the job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#info" class="summary-sig-name"><code>info</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>update</span>)</span></code>
+<br />
+Return the current status information about a job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#perform" class="summary-sig-name"><code>perform</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>action</span>)</span></code>
+<br />
+Performs an action on a job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#printInfo" class="summary-sig-name"><code>printInfo</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>verbose</span>)</span></code>
+<br />
+Prints the info() dictionary of a job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#printSpecification" class="summary-sig-name"><code>printSpecification</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Print the job specification used to submit the job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#restart" class="summary-sig-name"><code>restart</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Restarts the job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#results" class="summary-sig-name"><code>results</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>stdout</span>,
+          <span class=summary-sig-arg>outdir</span>,
+          <span class=summary-sig-arg>stderr</span>,
+          <span class=summary-sig-arg>block</span>,
+          <span class=summary-sig-arg>silent</span>)</span></code>
+<br />
+Retrive the results of an Xgrid job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#resume" class="summary-sig-name"><code>resume</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Resumes the job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#specification" class="summary-sig-name"><code>specification</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>update</span>)</span></code>
+<br />
+Return the Xgrid job specification.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#stop" class="summary-sig-name"><code>stop</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Stops the job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">        Job
+</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#submit" class="summary-sig-name"><code>submit</code></a>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>cmd</span>,
+          <span class=summary-sig-arg>args</span>,
+          <span class=summary-sig-arg>stdin</span>,
+          <span class=summary-sig-arg>indir</span>,
+          <span class=summary-sig-arg>email</span>,
+          <span class=summary-sig-arg>gridID</span>)</span></code>
+<br />
+Submits a single task job to the specified grid.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><span class="summary-sig"><a href="xg.Job-class.html#suspend" class="summary-sig-name"><code>suspend</code></a>(<span class=summary-sig-arg>self</span>)</span></code>
+<br />
+Suspends the job.</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="_checkGridID"></a><span class="summary-sig"><span class="summary-sig-name">_checkGridID</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>result</span>,
+          <span class=summary-sig-arg>gridID</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="_checkJobID"></a><span class="summary-sig"><span class="summary-sig-name">_checkJobID</span>(<span class=summary-sig-arg>self</span>,
+          <span class=summary-sig-arg>result</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="_update"></a><span class="summary-sig"><span class="summary-sig-name">_update</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="_updateInfo"></a><span class="summary-sig"><span class="summary-sig-name">_updateInfo</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+<tr><td align="right" valign="top" width="15%"><font size="-1">&nbsp;</font></td>
+  <td><code><a name="_updateSpecification"></a><span class="summary-sig"><span class="summary-sig-name">_updateSpecification</span>(<span class=summary-sig-arg>self</span>)</span></code>
+</td></tr>
+</table><br />
+
+
+<!-- =========== START OF METHOD DETAILS =========== -->
+<table class="details" border="1" cellpadding="3" cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="details">
+  <th colspan="2">Method Details</th></tr>
+</table>
+
+<a name="__init__"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">__init__</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>jobID</span>=<span class=sig-default>u'999999999'</span>,
+          <span class=sig-arg>connection</span>=<span class=sig-default>None</span>)</span>
+    <br /><i>(Constructor)</i>
+  </h3>
+  <p>An Xgrid job class.</p>
+  <p>This class allows a user to work with an Xgrid job. It provides 
+  capabilities for starting jobs, managing them and retrieving their 
+  results.</p>
+  Job instances are created in two ways:
+  <ol start="1">
+    <li>
+      By calling the job() or jobs() methods of the Grid or Controller 
+      classes.
+    </li>
+    <li>
+      By simply creating a new Job object:
+    </li>
+  </ol>
+<pre class="doctestblock">
+<span class="py-src"><span class="py-prompt">&gt;&gt;&gt; </span>j = Job(u<span class="py-string">'200'</span>)    <span class="py-comment"># Create a new job with id of 200</span></span></pre>
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>jobID</b></code> -
+         The job identifier of the job. To create a new job, leave 
+        blank.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=unicode, str or int)</i>
+      <dd><code><b>connection</b></code> -
+         Instance of Connection class. If empty a default Connection 
+        object is used.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Connection)</i>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="batch"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">batch</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>specification</span>,
+          <span class=sig-arg>gridID</span>=<span class=sig-default>u'0'</span>,
+          <span class=sig-arg>silent</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+  <p>Submits a batch job to the specified grid.</p>
+  <p>This is a nonblocking job submission method used for submitting 
+  complex multi-task jobs. For single task jobs, use submit().</p>
+  To retrieve job results, use the results() method.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>specification</b></code> -
+         The job specification of the job, which must be an instance of 
+        the JobSpecification class. See the docstring for 
+        JobSpecification for more details.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=JobSpecification)</i>
+      <dd><code><b>gridID</b></code> -
+         The identifier of the Grid to which the job will be submitted. 
+        If empty, the default grid u'0' is used.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=unicode, str or int)</i>
+      <dd><code><b>silent</b></code> -
+         If set to True will slience all messages.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=boolean)</i>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+        Initialized Job object for sumbitted job.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Job)</i>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="delete"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">delete</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Deletes the job.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="info"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">info</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>update</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+  <p>Return the current status information about a job.</p>
+  <p>The job info is a dictionary of keys describing the current state of 
+  the job. This includes start/stop dates, name, etc.</p>
+  The method printInfo() prints the info() dictionary in a nice 
+  form.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>update</b></code> -
+         A boolean flag that determines whether or not the internal 
+        state is updated upon creation. This involves a call to the Xgrid 
+        controller.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=boolean)</i>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="perform"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">perform</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>action</span>)</span>
+  </h3>
+  Performs an action on a job.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>action</b></code> -
+         The action to be performed as a string. Implemented actions 
+        are stop, resume, delete, restart, and suspend.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=str)</i>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="printInfo"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">printInfo</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>verbose</span>=<span class=sig-default>True</span>)</span>
+  </h3>
+  Prints the info() dictionary of a job.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="printSpecification"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">printSpecification</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Print the job specification used to submit the job.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="restart"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">restart</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Restarts the job.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="results"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">results</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>stdout</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>outdir</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>stderr</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>block</span>=<span class=sig-default>10</span>,
+          <span class=sig-arg>silent</span>=<span class=sig-default>False</span>)</span>
+  </h3>
+  <p>Retrive the results of an Xgrid job.</p>
+  This method provides both a blocking and nonblocking method of 
+  getting the results of an Xgrid job. The job does not need to be 
+  completed to retrieve the results. Because of this, the results method 
+  can be used to get partial results while the job continues to run. It 
+  can also automatically name output files.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>stdout</b></code> -
+         The local file in which to put the stdout stream of the remote 
+        job. If this is empty, the method will automatically generate a 
+        name in the local directory of the form: xgridjob-jobID.out. This 
+        file always is placed in the cwd rather than the outdir
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=str)</i>
+      <dd><code><b>outdir</b></code> -
+         The local directory in which to put the files retrieved from 
+        the remote job. This is only for files other than the stdout and 
+        stderr files. When empty, the other files are not brought back. 
+        This is to prevent any accidental overwrites of results.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=str)</i>
+      <dd><code><b>stderr</b></code> -
+         The local file in which to put the stderr stream of the remote 
+        job. If this is empty, the method will automatically generate a 
+        name in the local directory of the form: xgridjob-jobID.err.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=str)</i>
+      <dd><code><b>block</b></code> -
+         Whether or not to block until the job is finished. If block=0, 
+        partially completed results are retrieved and the job will 
+        continue to run. If block &gt; 0, the job status is queried every 
+        block seconds and the results are returned when the job is 
+        completed.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=int)</i>
+      <dd><code><b>silent</b></code> -
+         Silence all messages.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=boolean)</i>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="resume"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">resume</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Resumes the job.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="specification"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">specification</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>update</span>=<span class=sig-default>1</span>)</span>
+  </h3>
+  <p>Return the Xgrid job specification.</p>
+  The Xgrid job specification is the dictionary that Xgrid uses to 
+  submit the job. It contains keys that describe the command arguments, 
+  directories, etc.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="stop"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">stop</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Stops the job.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+
+<a name="submit"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">submit</span>(<span class=sig-arg>self</span>,
+          <span class=sig-arg>cmd</span>,
+          <span class=sig-arg>args</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>stdin</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>indir</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>email</span>=<span class=sig-default>''</span>,
+          <span class=sig-arg>gridID</span>=<span class=sig-default>u'0'</span>)</span>
+  </h3>
+  <p>Submits a single task job to the specified grid.</p>
+  <p>This is a nonblocking job submission method for a single job with no 
+  sub-tasks. For more complicated jobs with sub-tasks, use the batch() 
+  method.</p>
+  Job results can be obtained by calling the results() method.
+  <dl><dt></dt><dd>
+    <dl><dt><b>Parameters:</b></dt>
+      <dd><code><b>cmd</b></code> -
+         The command the execute as a string. The executable is not 
+        copied if the full path is given, otherwise it is.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=str)</i>
+      <dd><code><b>args</b></code> -
+         The command line arguments to be passed to the command.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=list or str)</i>
+      <dd><code><b>stdin</b></code> -
+         A local file to use as the stdin stream for the job.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=str)</i>
+      <dd><code><b>indir</b></code> -
+         A local directory to copy to the remote agent.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=str)</i>
+      <dd><code><b>email</b></code> -
+         An email to which notification will be send of various job 
+        state changes.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=str)</i>
+      <dd><code><b>gridID</b></code> -
+         The identifier of the Grid to which the job will be submitted. 
+        If empty, the default grid u'0' is used.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=unicode, str or int)</i>
+      </dd>
+    </dl>
+    <dl><dt><b>Returns:</b></dt>
+      <dd>
+        Initialized Job object for sumbitted job.
+        <br /><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        (type=Job)</i>
+      </dd>
+    </dl>
+  </dd></dl>
+</td></tr></table>
+
+<a name="suspend"></a>
+<table width="100%" class="func-details" bgcolor="#e0e0e0"><tr><td>
+  <h3><span class="sig"><span class="sig-name">suspend</span>(<span class=sig-arg>self</span>)</span>
+  </h3>
+  Suspends the job.
+  <dl><dt></dt><dd>
+  </dd></dl>
+</td></tr></table>
+<br />
+
+
+<!-- =========== START OF NAVBAR =========== -->
+<table class="navbar" border="0" width="100%" cellpadding="0" bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="center">
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="xg-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="trees.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="indices.html">Index</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar">&nbsp;&nbsp;&nbsp;<a class="navbar" href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+    <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tr>
+    <td align="left"><font size="-2">Generated by Epydoc 2.1 on Thu Dec 22 15:15:21 2005</font></td>
+    <td align="right"><a href="http://epydoc.sourceforge.net"
+                      ><font size="-2">http://epydoc.sf.net</font></a></td>
+  </tr>
+</table>
+</body>
+</html>
