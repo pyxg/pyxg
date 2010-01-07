@@ -11,7 +11,7 @@
 
 Xgrid is Apple's software for building and managing clusters of 
 Macintosh computers for use in high performance computation.  
-See http://www.apple.com/server/macosx/features/xgrid.html for more details.
+See http://www.apple.com/server/macosx/technology/xgrid.html for more details.
 
 This module wraps the xgrid command line in Tiger.  It will not work with
 the Technonogy Previews of Xgrid.  The command line is wrapped in this module 
