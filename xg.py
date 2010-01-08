@@ -1212,7 +1212,7 @@ class Job:
         return result
         
     def printInfo(self,verbose=True):
-        "Prints the info() dictionary of a job."""
+        """Prints the info() dictionary of a job."""
         self._updateInfo()
         if verbose == False:
             output = "%-4s %-24s %-10s %-10s" % \
