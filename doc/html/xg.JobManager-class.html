@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>xg.JobManager</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="xg-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="xg-module.html">Module&nbsp;xg</a> ::
+        Class&nbsp;JobManager
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="xg.JobManager-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class JobManager</h1><p class="nomargin-top"><span class="codelink"><a href="xg-pysrc.html#JobManager">source&nbsp;code</a></span></p>
+<p>Manage a set of Xgrid jobs.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="xg.JobManager-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default">u'0'</span>,
+        <span class="summary-sig-arg">connection</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">update</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Create a JobManager for a given Grid and Connection.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_updateJobs"></a><span class="summary-sig-name">_updateJobs</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Updates the _jobIDs and _jobs instance variables.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager._updateJobs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_checkGridID"></a><span class="summary-sig-name">_checkGridID</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">result</span>,
+        <span class="summary-sig-arg">gridID</span>)</span><br />
+      Checks a dictionary for an InvalidGridIdentifier error.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager._checkGridID">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="xg.JobManager-class.html#jobs" class="summary-sig-name">jobs</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">update</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Returns a list of initialized Job objects for all active jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.jobs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="xg.JobManager-class.html#job" class="summary-sig-name">job</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">jobID</span>=<span class="summary-sig-default">u'999999999'</span>,
+        <span class="summary-sig-arg">update</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Returns the Job object with job identifier id.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.job">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">tuple</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="xg.JobManager-class.html#jobIDs" class="summary-sig-name">jobIDs</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">update</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Returns a tuple of job identifiers for all active jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.jobIDs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="xg.JobManager-class.html#perform" class="summary-sig-name">perform</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">action</span>,
+        <span class="summary-sig-arg">jobIDs</span>)</span><br />
+      Performs an action on a subset of active jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.perform">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="stopAll"></a><span class="summary-sig-name">stopAll</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Stops all active jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.stopAll">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="suspendAll"></a><span class="summary-sig-name">suspendAll</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Suspends all active jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.suspendAll">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="resumeAll"></a><span class="summary-sig-name">resumeAll</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Resumes all active jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.resumeAll">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="deleteAll"></a><span class="summary-sig-name">deleteAll</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Deletes all active jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.deleteAll">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="restartAll"></a><span class="summary-sig-name">restartAll</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Restarts all active jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.restartAll">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="printJobs"></a><span class="summary-sig-name">printJobs</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Prints information about all active Xgrid jobs.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#JobManager.printJobs">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">gridID</span>=<span class="sig-default">u'0'</span>,
+        <span class="sig-arg">connection</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">update</span>=<span class="sig-default">0</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="xg-pysrc.html#JobManager.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Create a JobManager for a given Grid and Connection.</p>
+  <p>This class is mainly designed to be a base class of the Conroller and 
+  Grid classes, both of which need to manage Xgrid jobs.  The class 
+  provides basic capabilities to list active jobs and perform various 
+  actions on those jobs (stop, restart, resume, suspend, delete).  Job 
+  submission is handled by the Controller, Grid and Job classes.</p>
+  <h1 class="heading">Usage</h1>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>gridID</code></strong> (unicode, str or int) - The grid identifier of the grid on which the JobManager will 
+          manage jobs.  Internally, the grid identifier is a unicode 
+          string, but gridID can be given in any of the formats u'0', '0' 
+          or 0.  If gridID=u'0', the JobManager will manage jobs on the 
+          default grid</li>
+        <li><strong class="pname"><code>connection</code></strong> (Connection) - Instance of Connection class.  If empty a default Connection 
+          object is used.</li>
+        <li><strong class="pname"><code>update</code></strong> (boolean) - A boolean flag that determines whether or not the internal state 
+          is updated upon creation.  This involves a call to the Xgrid 
+          controller.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="jobs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">jobs</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">update</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="xg-pysrc.html#JobManager.jobs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a list of initialized Job objects for all active jobs.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>update</code></strong> (boolean) - A boolean flag that determines whether or not the internal state 
+          is updated upon creation.  This involves a call to the Xgrid 
+          controller.</li>
+    </ul></dd>
+    <dt>Returns: list</dt>
+        <dd>a lists of active Job objects.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="job"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">job</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">jobID</span>=<span class="sig-default">u'999999999'</span>,
+        <span class="sig-arg">update</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="xg-pysrc.html#JobManager.job">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the Job object with job identifier id.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>jobID</code></strong> (unicode, str, or int) - The job identifier.  Can be given as unicode, str or int.</li>
+        <li><strong class="pname"><code>update</code></strong> (boolean) - A boolean flag that determines whether or not the internal state 
+          is updated upon creation.  This involves a call to the Xgrid 
+          controller.</li>
+    </ul></dd>
+    <dt>Returns:</dt>
+        <dd>Initialize Job object.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="jobIDs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">jobIDs</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">update</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="xg-pysrc.html#JobManager.jobIDs">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a tuple of job identifiers for all active jobs.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>update</code></strong> (boolean) - A boolean flag that determines whether or not the internal state 
+          is updated upon creation.  This involves a call to the Xgrid 
+          controller.</li>
+    </ul></dd>
+    <dt>Returns: tuple</dt>
+        <dd>Tuple of job identifiers.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="perform"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">perform</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">action</span>,
+        <span class="sig-arg">jobIDs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="xg-pysrc.html#JobManager.perform">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Performs an action on a subset of active jobs.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>action</code></strong> (str) - The action to be performed as a string.  Implemented actions are 
+          stop, resume, delete, restart, and suspend.</li>
+        <li><strong class="pname"><code>jobIDs</code></strong> (Either the string 'all' or a python sequence of job identifiers.) - Jobs to perform the action on.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="xg-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Jan 11 14:48:47 2010
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
