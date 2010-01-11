@@ -969,7 +969,7 @@ class Job:
     # Job submission and results
 
     def results(self, stdout='', outdir='', stderr='', block=10,silent=False):
-        """Retrive the results of an Xgrid job.
+        """Retrieve the results of an Xgrid job.
         
         This method provides both a blocking and nonblocking method of 
         getting the results of an Xgrid job.  The job does not need to be 
