@@ -1042,7 +1042,7 @@ class Job:
                     
     # Job Submission
 
-    def submit(self, cmd, args='', stdin='', indir='', email='',gridID=u'0'): 
+    def submit(self, cmd, args='', stdin='', indir='', email='',gridID=u'0', silent=False): 
         """Submits a single task job to the specified grid.
         
         This is a nonblocking job submission method for a single job
@@ -1072,6 +1072,9 @@ class Job:
             The identifier of the Grid to which the job will be submitted.  
             If empty, the default grid u'0' is used.
         @type gridID: unicode, str or int
+        @arg silent:
+            If set to True will slience all messages.
+        @type silent: boolean         
         @returns: Initialized Job object for sumbitted job.
         @rtype: Job                           
         """      
@@ -1111,7 +1114,8 @@ class Job:
         jobinfo = xgridParse(cmd)
         self._checkGridID(jobinfo, processedGridID) 
         self.jobID = jobinfo['jobIdentifier']
-        print "Job submitted with id: ", self.jobID
+        if not silent:
+            print "Job submitted with id: ", self.jobID
         return self.jobID
         
     def batch(self, specification, gridID=u'0', silent=False):
