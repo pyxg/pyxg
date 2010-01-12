@@ -15,8 +15,11 @@ See http://www.apple.com/server/macosx/technology/xgrid.html for more details.
 
 This module wraps the xgrid command line in Tiger.  It will not work with
 the Technonogy Previews of Xgrid.  The command line is wrapped in this module 
-as the goal is to provide an interface to Xgrid that can be used from an interactive python prompt.  The Cocoa API for Xgrid (XgridFoundation) is 
-based on an event-loop paradigm and is less well suited for interactive work.  If you want to use Xgrid and python from within a Cocoa application, you should use XgridFoundation and PyObjC.
+as the goal is to provide an interface to Xgrid that can be used from an
+interactive python prompt. The Cocoa API for Xgrid (XgridFoundation) is 
+based on an event-loop paradigm and is less well suited for interactive work.
+If you want to use Xgrid and python from within a Cocoa application, you should
+use XgridFoundation and PyObjC.
 
 Features
 ========
@@ -144,14 +147,14 @@ class InvalidJobIdentifier(InvalidIdentifier):
         
 class InvalidAction(XgridError):
     """Invalide action exception."""
-    def __init__(self,action):
+    def __init__(self, action):
         self.action = action
     def __repr__(self):
         return "Invalid Xgrid Action: " + str(self.action)
 
 class InvalidIdentifierType:
     """Invalid job or grid identifier type."""
-    def __init__(self,bad_var):
+    def __init__(self, bad_var):
         self.bad_var = bad_var
     def __repr__(self):
         return "Invalid Xgrid Identifier Type: " + str(self.bad_var)
@@ -196,9 +199,9 @@ class NSString(objc.Category(NSString)):
         m = re.compile(r'(?P<prefix>^\s*date.* = )(?P<date>.*?);')
         lines = str.splitlines()
         
-        for (i,l) in itertools.izip(itertools.count(), lines):
+        for (i, l) in itertools.izip(itertools.count(), lines):
             if (m.search(l)):
-                lines[i]=m.sub(r'\g<prefix>"\g<date>";', l)
+                lines[i] = m.sub(r'\g<prefix>"\g<date>";', l)
         
         sep = '\n'
         str = sep.join(lines)
@@ -221,7 +224,7 @@ def xgridParse(cmd="xgrid -grid list"):
     """
 
     # When set, print the actual commands Xgrid sent
-    if PYXGRID_DEBUG==True:
+    if PYXGRID_DEBUG == True:
         print cmd
         
     # Run the xgrid command
@@ -243,9 +246,9 @@ def xgridParse(cmd="xgrid -grid list"):
 def processID(id):
     """Makes sure that the id is a unicode string"""
     
-    if (isinstance(id,str) or isinstance(id, unicode)):
+    if (isinstance(id, str) or isinstance(id, unicode)):
         return unicode(id)
-    elif isinstance(id,int):
+    elif isinstance(id, int):
         return unicode(id)
     else:
         raise InvalidIdentifierType(id)
@@ -387,7 +390,7 @@ class JobManager:
         cmd = 'xgrid %s-job list %s' % (self._connection.connectString(),
             gridIDString)
         result = xgridParse(cmd)
-        self._checkGridID(result,self.gridID)
+        self._checkGridID(result, self.gridID)
         self._jobIDs = result['jobList']
         
         # Now build the array of Job objects
@@ -398,7 +401,7 @@ class JobManager:
     def _checkGridID(self, result, gridID):
         """Checks a dictionary for an InvalidGridIdentifier error."""
         if result.has_key('error'):
-            if result['error']=='InvalidGridIdentifier':
+            if result['error'] == 'InvalidGridIdentifier':
                 raise InvalidGridIdentifier(gridID)
 
     def jobs(self, update=1):
@@ -474,7 +477,7 @@ class JobManager:
             # Delete all jobs
             self._updateJobs()
             jobList = self._jobIDs  # list of jobs to act on
-        elif isinstance(jobIDs,tuple) or isinstance(jobIDs,list):
+        elif isinstance(jobIDs, tuple) or isinstance(jobIDs, list):
             # Delete some jobs
             jobList = jobIDs
         else:
@@ -486,23 +489,23 @@ class JobManager:
         
     def stopAll(self):
         """Stops all active jobs."""
-        self.perform(action='stop',jobIDs='all')
+        self.perform(action='stop', jobIDs='all')
         
     def suspendAll(self):
         """Suspends all active jobs."""
-        self.perform(action='suspend',jobIDs='all')        
+        self.perform(action='suspend', jobIDs='all')        
 
     def resumeAll(self):
         """Resumes all active jobs."""
-        self.perform(action='resume',jobIDs='all')        
+        self.perform(action='resume', jobIDs='all')        
 
     def deleteAll(self):
         """Deletes all active jobs."""
-        self.perform(action='delete',jobIDs='all')        
+        self.perform(action='delete', jobIDs='all')        
 
     def restartAll(self):
         """Restarts all active jobs."""
-        self.perform(action='restart',jobIDs='all')
+        self.perform(action='restart', jobIDs='all')
 
     def printJobs(self):
         """Prints information about all active Xgrid jobs."""
@@ -672,7 +675,7 @@ class Controller(JobManager, GridManager):
         
     # Job Submission
         
-    def submit(self, cmd, args='', stdin='', indir='', email='',gridID=u'0'):
+    def submit(self, cmd, args='', stdin='', indir='', email='', gridID=u'0'):
         """Submits a single task job to the specified grid.
         
         This is a nonblocking job submission method for a single job
@@ -788,12 +791,12 @@ class Grid(JobManager):
         cmd = 'xgrid %s-grid attributes -gid %s' % \
             (self._connection.connectString(), self.gridID)
         result = xgridParse(cmd)
-        self._checkGridID(result,self.gridID)
+        self._checkGridID(result, self.gridID)
         self._info = result['gridAttributes']
 
-    def _checkGridID(self,result,gridID):
+    def _checkGridID(self, result, gridID):
         if result.has_key('error'):
-            if result['error']=='InvalidGridIdentifier':
+            if result['error'] == 'InvalidGridIdentifier':
                 raise InvalidGridIdentifier(gridID)
 
     def info(self, update=1):
@@ -901,7 +904,7 @@ class Job:
             self._connection = connection
 
         self._specification = {}
-        self._info ={}
+        self._info = {}
 
     # Semi-private methods
 
@@ -923,14 +926,14 @@ class Job:
         self._updateInfo()
         self._updateSpecification()
 
-    def _checkJobID(self,result):
+    def _checkJobID(self, result):
         if result.has_key('error'):
-            if result['error']=='InvalidJobIdentifier':
+            if result['error'] == 'InvalidJobIdentifier':
                 raise InvalidJobIdentifier(self.jobID)
 
-    def _checkGridID(self,result,gridID):
+    def _checkGridID(self, result, gridID):
         if result.has_key('error'):
-            if result['error']=='InvalidGridIdentifier':
+            if result['error'] == 'InvalidGridIdentifier':
                 raise InvalidGridIdentifier(gridID)
                          
     # Get methods
@@ -968,7 +971,7 @@ class Job:
         
     # Job submission and results
 
-    def results(self, stdout='', outdir='', stderr='', block=10,silent=False):
+    def results(self, stdout='', outdir='', stderr='', block=10, silent=False):
         """Retrieve the results of an Xgrid job.
         
         This method provides both a blocking and nonblocking method of 
@@ -1042,7 +1045,8 @@ class Job:
                     
     # Job Submission
 
-    def submit(self, cmd, args='', stdin='', indir='', email='',gridID=u'0', silent=False): 
+    def submit(self, cmd, args='', stdin='', indir='', email='', gridID=u'0', \
+    silent=False): 
         """Submits a single task job to the specified grid.
         
         This is a nonblocking job submission method for a single job
@@ -1094,9 +1098,9 @@ class Job:
             emailString = '-email ' + email + ' '
 
         # Process the arguments
-        if isinstance(args,str):
+        if isinstance(args, str):
             argString = args
-        elif isinstance(args,list):
+        elif isinstance(args, list):
             argList = []
             for a in args:
                 argList.append(str(a)+" ")
@@ -1150,7 +1154,7 @@ class Job:
         #job_dict = propertyListFromPythonCollection(specification.jobspec())
         jobSpec = specification.jobSpec()
         plistFile = tempfile.NamedTemporaryFile().name
-        jobSpec.writeToFile_atomically_(plistFile,1)
+        jobSpec.writeToFile_atomically_(plistFile, 1)
         cmd = "xgrid %s-gid %s -job batch %s" % \
             (self._connection.connectString(), processedGridID, plistFile)
         jobinfo = xgridParse(cmd)
@@ -1180,12 +1184,12 @@ class Job:
                 (self._connection.connectString(), action, self.jobID)           
             result = xgridParse(cmd)
             self._checkJobID(result)
-            print "Action %s performed on job %s" % (action,self.jobID)
+            print "Action %s performed on job %s" % (action, self.jobID)
             # If delete reset everything but the controller
             if action == 'delete':
                 self.jobID = u'999999999'
                 self._specification = {}
-                self._info ={}
+                self._info = {}
         else:
             raise InvalidAction(action)
             
@@ -1215,7 +1219,7 @@ class Job:
         result = '<Job with jobID = %s>' % self.jobID
         return result
         
-    def printInfo(self,verbose=True):
+    def printInfo(self, verbose=True):
         """Prints the info() dictionary of a job."""
         self._updateInfo()
         if verbose == False:
@@ -1299,7 +1303,7 @@ class JobSpecification:
         """Returns the value of tasksMustStartSimultaneously."""
         return self._jobDict[u'schedulerParameters'].get(u'tasksMustStartSimultaneously')
             
-    def setMinimumTaskCount(self,count):
+    def setMinimumTaskCount(self, count):
         """Sets the min number of tasks that should be started."""
         #self._checkSchedulerParameters()
         self._jobDict[u'schedulerParameters'][u'minimumTaskCount'] = count
@@ -1308,7 +1312,7 @@ class JobSpecification:
         """Returns the value of minimumTaskCount."""
         return self._jobDict[u'schedulerParameters'].get(u'minimumTaskCount')
         
-    def setDependsOnJobs(self,jobArray):
+    def setDependsOnJobs(self, jobArray):
         """Takes a list of Xgrid job ids that must complete before this job begins."""
         #self._checkSchedulerParameters()
         self._jobDict[u'schedulerParameters'][u'dependsOnJobs'] = \
@@ -1346,8 +1350,8 @@ class JobSpecification:
         self._jobDict[u'inputFiles'][unicode(fileName)] = \
             {u'fileData':data,u'isExecutable':isExecString}
     
-    def delFile(self,fileName):
-        """Deletes the file named filename from the JobSpecification.
+    def delFile(self, fileName):
+        """Deletes the file named fileName from the JobSpecification.
         
         List filenames using the flies() method.
         """
@@ -1361,12 +1365,12 @@ class JobSpecification:
         if f:
             return f.keys()
             
-    def addTask(self, cmd, args=u'', env={}, inputStream=u'', 
+    def addTask(self, cmd, args=u'', env={}, inputStream=u'', \
         dependsOnTasks=[]):
         """Adds a task to the jobSpecification.
         
         @arg cmd:  
-            The command the execute as a string.  The executable is not
+            The command to execute as a string.  The executable is not
             copied if the full path is given, otherwise it is.
         @type cmd: str            
         @arg args:  
@@ -1376,8 +1380,8 @@ class JobSpecification:
             A Python dictionary of environment variables to use on the agents.
         @type env: unicode or str
         @arg inputStream:
-            A local file to send to the agents that will be used a stdin for the 
-            task
+            A local file to send to the agents that will be used as stdin for
+            the task
         @type inputStream: unicode or str
         @arg dependsOnTasks:
             A list of task ids that must complete before this one begins
@@ -1388,9 +1392,9 @@ class JobSpecification:
         self.nextTask += 1
         
         # Process the arguments
-        if isinstance(args,str) or isinstance(args,unicode):
+        if isinstance(args, str) or isinstance(args, unicode):
             argList = args.split(' ')
-        elif isinstance(args,list):
+        elif isinstance(args, list):
             argList = args
         else:
             raise TypeError
@@ -1409,7 +1413,7 @@ class JobSpecification:
     def copyTask(self):
         pass
         
-    def delTask(self,task):
+    def delTask(self, task):
         """Deletes the task named task.
         
         List the task names using the tasks() method.
