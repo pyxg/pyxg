@@ -1,11 +1,11 @@
 #****************************************************************************
 #       Copyright (C) 2005 Brian Granger <ellisonbg@gmail.com> and 
-#                          Barry Wark <bwark@u.washington.edu>
-#
+#                          Barry Wark <bwark@u.washington.edu> and
+#                          Beat Rupp <beatrupp@gmail.com
 #  Distributed under the terms of the BSD License.  
 #****************************************************************************
 
-# PyXG-0.1.0, Released 5/3/2005
+# PyXG-0.3.0
 
 """PyXG provides a python interface to Apple's Xgrid.  
 
@@ -161,7 +161,7 @@ class InvalidIdentifierType:
 
 # Setting this flag causes printing of every Xgrid command that is executed
 PYXGRID_DEBUG = False
-VERSION = '0.2.0'
+VERSION = '0.3.0'
 
 #####################################################################
 #   See if there is an Xgrid cluster defined by environment vars    #
@@ -184,11 +184,11 @@ class NSString(objc.Category(NSString)):
         This enables the handling of illegal 'old-style' plists returned by 
         the xgrid command-line tool.
         
-        In particular, xgrid returns "old-style" plists that contain dates 
-        that aren't quoted strings.  Because old-style plists can't contain
-        dates in native format (only as quoted strings), the built-in
-        CoreFoundation parser chokes on the output. (A bug has been filed 
-        with apple)
+        In particular, on systems before Mac OS X Snow Leopard (10.6) xgrid
+        returns "old-style" plists that contain dates that aren't quoted
+        strings.  Because old-style plists can't contain dates in native
+        format (only as quoted strings), the built-in CoreFoundation 
+        parser chokes on the output.
         
         xGridPropertyList: uses a compiled RegEx to add quotes around date
         strings in the xgrid output before passing the result to NSString's
@@ -942,7 +942,7 @@ class Job:
         """Return the Xgrid job specification.
         
         The Xgrid job specification is the dictionary that Xgrid uses
-        to submit the job.  It contains keys that describe the command
+        to submit the job. It contains keys that describe the command
         arguments, directories, etc.
         """
         
@@ -954,7 +954,7 @@ class Job:
         """Return the current status information about a job.
         
         The job info is a dictionary of keys describing the current state
-        of the job.  This includes start/stop dates, name, etc.
+        of the job. This includes start/stop dates, name, etc.
         
         The method printInfo() prints the info() dictionary in a nice form.
         
@@ -975,15 +975,15 @@ class Job:
         """Retrieve the results of an Xgrid job.
         
         This method provides both a blocking and nonblocking method of 
-        getting the results of an Xgrid job.  The job does not need to be 
-        completed to retrieve the results.  Because of this, the results 
+        getting the results of an Xgrid job. The job does not need to be 
+        completed to retrieve the results. Because of this, the results 
         method can be used to get partial results while the job continues 
-        to run.  It can also automatically name output files.
+        to run. It can also automatically name output files.
         
         @arg stdout:
             The local file in which to put the stdout stream of the remote job.
             If this is empty, the method will automatically generate a name in
-            the local directory of the form: xgridjob-jobID.out.  This file 
+            the local directory of the form: xgridjob-jobID.out. This file 
             always is placed in the cwd rather than the outdir
         @type stdout: str   
         @arg stderr:
@@ -993,14 +993,14 @@ class Job:
         @type stderr: str
         @arg outdir:
             The local directory in which to put the files retrieved from the
-            remote job.  This is only for files other than the stdout and
-            stderr files.  When empty, the other files are not brought back.
+            remote job. This is only for files other than the stdout and
+            stderr files. When empty, the other files are not brought back.
             This is to prevent any accidental overwrites of results.
         @type outdir: str
         @arg block:
-            Whether or not to block until the job is finished.  If block=0, 
+            Whether or not to block until the job is finished. If block=0, 
             partially completed results are retrieved and the job will
-            continue to run.  If block > 0, the job status is queried every
+            continue to run. If block > 0, the job status is queried every
             block seconds and the results are returned when the job 
             is completed.
         @type block: int
@@ -1056,7 +1056,7 @@ class Job:
         Job results can be obtained by calling the results() method.
                 
         @arg cmd:  
-            The command the execute as a string.  The executable is not
+            The command to execute as a string.  The executable is not
             copied if the full path is given, otherwise it is.
         @type cmd: str            
         @arg args:  
@@ -1126,13 +1126,13 @@ class Job:
         """Submits a batch job to the specified grid.
         
         This is a nonblocking job submission method used for submitting
-        complex multi-task jobs.  For single task jobs, use submit(). 
+        complex multi-task jobs. For single task jobs, use submit(). 
         
         To retrieve job results, use the results() method.
          
         @arg specification:
             The job specification of the job, which must be an instance of the 
-            JobSpecification class.  See the docstring for JobSpecification 
+            JobSpecification class. See the docstring for JobSpecification 
             for more details.
         @type specification: JobSpecification
         @arg gridID:
