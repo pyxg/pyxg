@@ -1,5 +1,5 @@
 #****************************************************************************
-#       Copyright (C) 2005 Brian Granger <bgranger@scu.edu> and 
+#       Copyright (C) 2005 Brian Granger <ellisonbg@gmail.com> and 
 #                          Barry Wark <bwark@u.washington.edu>
 #
 #  Distributed under the terms of the BSD License.  
