@@ -13,8 +13,8 @@ Xgrid is Apple's software for building and managing clusters of
 Macintosh computers for use in high performance computation.  
 See http://www.apple.com/server/macosx/technology/xgrid.html for more details.
 
-This module wraps the xgrid command line in Tiger.  It will not work with
-the Technonogy Previews of Xgrid.  The command line is wrapped in this module 
+This module wraps the xgrid command line in Mac OS X. It will not work with
+the Technonogy Previews of Xgrid. The command line is wrapped in this module 
 as the goal is to provide an interface to Xgrid that can be used from an
 interactive python prompt. The Cocoa API for Xgrid (XgridFoundation) is 
 based on an event-loop paradigm and is less well suited for interactive work.
@@ -1067,8 +1067,8 @@ class Job:
                     
     # Job Submission
 
-    def submit(self, cmd, args='', stdin='', indir='', email='', gridID=u'0', \
-    silent=False): 
+    def submit(self, cmd, args='', stdin='', indir='', email='', gridID=u'0', 
+               silent=False): 
         """Submits a single task job to the specified grid.
         
         This is a nonblocking job submission method for a single job
