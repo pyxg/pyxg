@@ -108,6 +108,7 @@ import re
 import itertools
 import tempfile
 import os.path
+from functools import wraps
 
 try:
     from Foundation import *
@@ -177,7 +178,28 @@ if not defaultXgridPassword:
 #       Some utilities for running and parsing Xgrid commands       #
 ##################################################################### 
 
-class NSString(objc.Category(NSString)):    
+def autorelease(func):
+    """A decorator to properly release ObjC object instances.
+    
+    Anytime an ObjC object instance is created, an NSAutoReleasePool needs to
+    be available. PyObjC will create one but it won't get drained very often.
+    
+    @param func: The function to be decorated.
+    """
+    
+    @wraps(func)
+    def wrapped(*args, **kw):
+        pool = NSAutoreleasePool.alloc().init()
+        try:
+            func(*args, **kw)
+        finally:
+            pool.drain()
+            print "RELEASING POOL"
+        del pool
+
+    return wrapped 
+    
+class NSString(objc.Category(NSString)):
     def xGridPropertyList(self):
         """Category to extend NSString.
         
