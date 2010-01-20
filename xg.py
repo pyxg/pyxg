@@ -194,7 +194,6 @@ def autorelease(func):
             func(*args, **kw)
         finally:
             pool.drain()
-            print "RELEASING POOL"
         del pool
 
     return wrapped 
