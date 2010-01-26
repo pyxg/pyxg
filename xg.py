@@ -100,8 +100,8 @@ Job submitted with id:  234
 #   Imports                                                         #
 ##################################################################### 
 
-import string
-import os, sys
+#import string
+#import os, sys
 import time
 import commands
 import re
