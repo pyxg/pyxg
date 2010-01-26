@@ -1,5 +1,5 @@
 #****************************************************************************
-#       Copyright (C) 2005 Brian Granger <ellisonbg@gmail.com> and 
+#  Copyright (C) 2005-2010 Brian Granger <ellisonbg@gmail.com> and
 #                          Barry Wark <bwark@u.washington.edu> and
 #                          Beat Rupp <beatrupp@gmail.com
 #  Distributed under the terms of the BSD License.  
@@ -137,17 +137,17 @@ class InvalidIdentifier(XgridError):
         return "Invalid Xgrid Identifier: " + str(self.id)
 
 class InvalidGridIdentifier(InvalidIdentifier):
-    """Invalide grid identifier exception."""
+    """Invalid grid identifier exception."""
     def __repr__(self):
         return "Invalid Grid Identifier: " + str(self.id)
         
 class InvalidJobIdentifier(InvalidIdentifier):
-    """Invalide job identifier exception."""
+    """Invalid job identifier exception."""
     def __repr__(self):
         return "Invalid Job Identifier: " + str(self.id)
         
 class InvalidAction(XgridError):
-    """Invalide action exception."""
+    """Invalid action exception."""
     def __init__(self, action):
         self.action = action
     def __repr__(self):
