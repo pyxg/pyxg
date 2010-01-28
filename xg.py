@@ -121,7 +121,7 @@ except ImportError, e:
 # Exceptions                                                        #
 #####################################################################  
 
-class XgridError:
+class XgridError(Exception):
     """Xgrid exception class."""
     def __init__(self, err):
         self.err = err
@@ -153,7 +153,7 @@ class InvalidAction(XgridError):
     def __repr__(self):
         return "Invalid Xgrid Action: " + str(self.action)
 
-class InvalidIdentifierType:
+class InvalidIdentifierType(Exception):
     """Invalid job or grid identifier type."""
     def __init__(self, bad_var):
         self.bad_var = bad_var
