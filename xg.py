@@ -97,7 +97,7 @@ Job submitted with id:  234
 """
 
 #####################################################################
-#   Imports                                                         #
+# Imports                                                           #
 ##################################################################### 
 
 #import string
@@ -118,7 +118,7 @@ except ImportError, e:
     raise e
     
 #####################################################################
-#   Exceptions                                                      #
+# Exceptions                                                        #
 #####################################################################  
 
 class XgridError:
@@ -165,7 +165,7 @@ PYXGRID_DEBUG = False
 VERSION = '0.3.0'
 
 #####################################################################
-#   See if there is an Xgrid cluster defined by environment vars    #
+# See if there is an Xgrid cluster defined by environment vars      #
 #####################################################################  
 
 defaultXgridHostname = os.environ.get('XGRID_CONTROLLER_HOSTNAME')
@@ -175,7 +175,7 @@ if not defaultXgridPassword:
     defaultXgridPassword = ''
 
 #####################################################################
-#       Some utilities for running and parsing Xgrid commands       #
+# Utilities for running and parsing Xgrid commands                  #
 ##################################################################### 
 
 def autorelease(func):
@@ -261,7 +261,7 @@ def xgridParse(cmd="xgrid -grid list"):
         raise XgridError("xgrid command error: %s" % result[0])
 
 #####################################################################
-#		Other Utilities												#
+# Other Utilities                                                   #
 #####################################################################  
   
 def processID(id):
@@ -275,7 +275,7 @@ def processID(id):
         raise InvalidIdentifierType(id)
         
 #####################################################################
-#		Classes														#
+# Classes                                                           #
 #####################################################################
 
 class Connection:
