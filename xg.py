@@ -189,7 +189,7 @@ def autorelease(func):
     
     @wraps(func)
     def wrapped(*args, **kw):
-        pool = Foundation.NSAutoreleasePool.alloc().init()
+        pool = objc.NSAutoreleasePool.alloc().init()
         try:
             func(*args, **kw)
         finally:
