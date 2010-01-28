@@ -111,7 +111,7 @@ import os.path
 from functools import wraps
 
 try:
-    from Foundation import *
+    import Foundation
     import objc
 except ImportError, e:
     print "This module requires PyObjC."
@@ -189,7 +189,7 @@ def autorelease(func):
     
     @wraps(func)
     def wrapped(*args, **kw):
-        pool = NSAutoreleasePool.alloc().init()
+        pool = Foundation.NSAutoreleasePool.alloc().init()
         try:
             func(*args, **kw)
         finally:
@@ -198,7 +198,7 @@ def autorelease(func):
 
     return wrapped 
     
-class NSString(objc.Category(NSString)):
+class NSString(objc.Category(Foundation.NSString)):
     def xGridPropertyList(self):
         """Category to extend NSString.
         
@@ -1270,8 +1270,8 @@ class JobSpecification:
     def __init__(self):
         """This class is used to setup the plist file for multi-task jobs.
         """
-        self._jobDict = NSMutableDictionary.dictionaryWithCapacity_(10)
-        self._jobSpec = NSArray.arrayWithObject_(self._jobDict)
+        self._jobDict = Foundation.NSMutableDictionary.dictionaryWithCapacity_(10)
+        self._jobSpec = Foundation.NSArray.arrayWithObject_(self._jobDict)
         self._jobDict[u'taskSpecifications'] = {}
         #self.tasks = []
         self.nextTask = 0
@@ -1362,7 +1362,7 @@ class JobSpecification:
         
         assert os.path.isfile(localFilePath), "File does not exist: %s" % localFilePath
         path = NSString.stringWithString_(unicode(localFilePath)).stringByStandardizingPath()
-        data = NSData.dataWithContentsOfFile_(path)
+        data = Foundation.NSData.dataWithContentsOfFile_(path)
         self._checkInputFiles()
         if isExecutable:
             isExecString = u'YES'
