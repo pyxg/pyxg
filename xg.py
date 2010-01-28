@@ -821,6 +821,17 @@ class Grid(JobManager):
                 raise InvalidGridIdentifier(gridID)
 
     def info(self, update=1):
+        """Return the current status information about a grid.
+
+        The grid info is a dictionary of keys describing the current state
+        of the grid.
+
+        @arg update:  A boolean flag that determines whether or not the
+            internal state is updated upon creation.  This involves a call to
+            the Xgrid controller.
+        @type update: boolean
+
+        """
         if update:
             self._updateInfo()
         return self._info
