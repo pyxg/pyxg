@@ -100,15 +100,14 @@ Job submitted with id:  234
 # Imports                                                           #
 ##################################################################### 
 
-#import string
-#import os, sys
-import time
 import commands
-import re
-import itertools
-import tempfile
-import os.path
 from functools import wraps
+import itertools
+import os.path
+import platform
+import re
+import tempfile
+import time
 
 try:
     import Foundation
