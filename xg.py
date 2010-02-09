@@ -1,7 +1,7 @@
 #****************************************************************************
 #  Copyright (C) 2005-2010 Brian Granger <ellisonbg@gmail.com> and
 #                          Barry Wark <bwark@u.washington.edu> and
-#                          Beat Rupp <beatrupp@gmail.com
+#                          Beat Rupp <beatrupp@gmail.com>
 #  Distributed under the terms of the BSD License.  
 #****************************************************************************
 
@@ -125,7 +125,6 @@ class XgridError(Exception):
     """Xgrid exception class."""
     def __init__(self, err):
         self.err = err
-        
     def __repr__(self):
         return "Xgrid Error: %s" % (self.err)
     
@@ -254,7 +253,10 @@ def xgridParse(cmd="xgrid -grid list"):
     # Check for good exit status (0) and parse output
     if result[0] == 0:
         if result[1]:
-            return NSString.stringWithString_(result[1]).xGridPropertyList()
+            if detectPlatform < 10.6:
+                return NSString.stringWithString_(result[1]).xGridPropertyList()
+            else:
+                return NSString.stringWithString_(result[1]).propertyList()
         else:
             return {}
     else:
@@ -273,7 +275,17 @@ def processID(id):
         return unicode(id)
     else:
         raise InvalidIdentifierType(id)
-        
+
+def detectPlatform():
+    """Detect the version of Mac OS.
+    
+    @return: Platform version
+    @rtype: float
+    """
+    version, _, _ = platform.mac_ver()
+    version = float('.'.join(version.split('.')[:2]))
+    return version
+
 #####################################################################
 # Classes                                                           #
 #####################################################################
