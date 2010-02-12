@@ -11,7 +11,7 @@
 
 Xgrid is Apple's software for building and managing clusters of 
 Macintosh computers for use in high performance computation.  
-See http://www.apple.com/server/macosx/technology/xgrid.html for more details.
+See U{http://www.apple.com/server/macosx/technology/xgrid.html} for more details.
 
 This module wraps the xgrid command line in Mac OS X. It will not work with
 the Technonogy Previews of Xgrid. The command line is wrapped in this module 
@@ -289,7 +289,7 @@ def detectPlatform():
 # Classes                                                           #
 #####################################################################
 
-class Connection:
+class Connection(object):
     """Track information needed to connect to an XGrid controller."""
     
     def __init__(self, hostname=0, password=0, kerberos=False):
@@ -370,7 +370,7 @@ class Connection:
         """Returns the connection string to be used in Xgrid commands."""
         return self._connectString
             
-class JobManager:
+class JobManager(object):
     """Manage a set of Xgrid jobs."""
     
     def __init__(self, gridID=u'0', connection=None, update=0):
@@ -550,7 +550,7 @@ class JobManager:
         for j in self._jobs:
             j.printInfo(0)
 
-class GridManager:
+class GridManager(object):
     """Manage the grids of a given Xgrid controller."""
     
     def __init__(self, connection=None, update=0):
@@ -911,7 +911,7 @@ class Grid(JobManager):
         result = '<Grid with gridID = %s>' % self.gridID
         return result
         
-class Job:
+class Job(object):
     """A class for working with an Xgrid job."""
     
     def __init__(self, jobID=u'999999999', connection=None):
@@ -1286,7 +1286,7 @@ class Job:
             print '   ', key, ': ', self._specification[key]
         print "}"
         
-class JobSpecification:
+class JobSpecification(object):
     """A class used for constructing multi-task batch jobs."""
     
     def __init__(self):
