@@ -56,6 +56,19 @@
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class JobManager</h1><p class="nomargin-top"><span class="codelink"><a href="xg-pysrc.html#JobManager">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">JobManager</strong>
+</pre>
+
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="xg.Controller-class.html">Controller</a></li><li>, <a href="xg.Grid-class.html">Grid</a></li>  </ul>
+</dd></dl>
+
+<hr />
 <p>Manage a set of Xgrid jobs.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
@@ -82,7 +95,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="xg.JobManager-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default">u'0'</span>,
+        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">connection</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">update</span>=<span class="summary-sig-default">0</span>)</span><br />
       Create a JobManager for a given Grid and Connection.</td>
@@ -156,7 +169,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="xg.JobManager-class.html#job" class="summary-sig-name">job</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">jobID</span>=<span class="summary-sig-default">u'999999999'</span>,
+        <span class="summary-sig-arg">jobID</span>=<span class="summary-sig-default"><code class="variable-quote">u'</code><code class="variable-string">999999999</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">update</span>=<span class="summary-sig-default">1</span>)</span><br />
       Returns the Job object with job identifier id.</td>
           <td align="right" valign="top">
@@ -307,6 +320,49 @@
       
     </td>
   </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
 </table>
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
@@ -334,7 +390,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">gridID</span>=<span class="sig-default">u'0'</span>,
+        <span class="sig-arg">gridID</span>=<span class="sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">connection</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">update</span>=<span class="sig-default">0</span>)</span>
     <br /><em class="fname">(Constructor)</em>
@@ -365,6 +421,9 @@
           is updated upon creation.  This involves a call to the Xgrid 
           controller.</li>
     </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
   </dl>
 </td></tr></table>
 </div>
@@ -404,7 +463,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">job</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">jobID</span>=<span class="sig-default">u'999999999'</span>,
+        <span class="sig-arg">jobID</span>=<span class="sig-default"><code class="variable-quote">u'</code><code class="variable-string">999999999</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">update</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -508,7 +567,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Jan 11 14:48:47 2010
+    Generated by Epydoc 3.0.1 on Fri Feb 12 11:38:34 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

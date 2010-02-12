@@ -57,15 +57,16 @@
 <h1 class="epydoc">Module xg</h1><p class="nomargin-top"><span class="codelink"><a href="xg-pysrc.html">source&nbsp;code</a></span></p>
 <p>PyXG provides a python interface to Apple's Xgrid.</p>
   <p>Xgrid is Apple's software for building and managing clusters of 
-  Macintosh computers for use in high performance computation. See 
-  http://www.apple.com/server/macosx/technology/xgrid.html for more 
-  details.</p>
-  <p>This module wraps the xgrid command line in Tiger.  It will not work 
-  with the Technonogy Previews of Xgrid.  The command line is wrapped in 
+  Macintosh computers for use in high performance computation. See <a 
+  href="http://www.apple.com/server/macosx/technology/xgrid.html" 
+  target="_top">http://www.apple.com/server/macosx/technology/xgrid.html</a>
+  for more details.</p>
+  <p>This module wraps the xgrid command line in Mac OS X. It will not work
+  with the Technonogy Previews of Xgrid. The command line is wrapped in 
   this module as the goal is to provide an interface to Xgrid that can be 
-  used from an interactive python prompt.  The Cocoa API for Xgrid 
+  used from an interactive python prompt. The Cocoa API for Xgrid 
   (XgridFoundation) is based on an event-loop paradigm and is less well 
-  suited for interactive work.  If you want to use Xgrid and python from 
+  suited for interactive work. If you want to use Xgrid and python from 
   within a Cocoa application, you should use XgridFoundation and 
   PyObjC.</p>
   <h1 class="heading">Features</h1>
@@ -180,7 +181,7 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="xg.InvalidGridIdentifier-class.html" class="summary-name">InvalidGridIdentifier</a><br />
-      Invalide grid identifier exception.
+      Invalid grid identifier exception.
     </td>
   </tr>
 <tr>
@@ -188,7 +189,7 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="xg.InvalidJobIdentifier-class.html" class="summary-name">InvalidJobIdentifier</a><br />
-      Invalide job identifier exception.
+      Invalid job identifier exception.
     </td>
   </tr>
 <tr>
@@ -196,7 +197,7 @@
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
         <a href="xg.InvalidAction-class.html" class="summary-name">InvalidAction</a><br />
-      Invalide action exception.
+      Invalid action exception.
     </td>
   </tr>
 <tr>
@@ -205,13 +206,6 @@
     </td><td class="summary">
         <a href="xg.InvalidIdentifierType-class.html" class="summary-name">InvalidIdentifierType</a><br />
       Invalid job or grid identifier type.
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="xg.NSString-class.html" class="summary-name">NSString</a>
     </td>
   </tr>
 <tr>
@@ -294,7 +288,24 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="xg-module.html#xgridParse" class="summary-sig-name">xgridParse</a>(<span class="summary-sig-arg">cmd</span>=<span class="summary-sig-default">&quot;xgrid -grid list&quot;</span>)</span><br />
+          <td><span class="summary-sig"><a href="xg-module.html#autorelease" class="summary-sig-name">autorelease</a>(<span class="summary-sig-arg">func</span>)</span><br />
+      A decorator to properly release ObjC object instances.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#autorelease">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="xg-module.html#xgridParse" class="summary-sig-name">xgridParse</a>(<span class="summary-sig-arg">cmd</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">xgrid -grid list</code><code class="variable-quote">'</code></span>)</span><br />
       Submits and parses output from the xgrid command line.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="xg-pysrc.html#xgridParse">source&nbsp;code</a></span>
@@ -315,6 +326,23 @@
       Makes sure that the id is a unicode string</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="xg-pysrc.html#processID">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">float</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="xg-module.html#detectPlatform" class="summary-sig-name">detectPlatform</a>()</span><br />
+      Detect the version of Mac OS.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="xg-pysrc.html#detectPlatform">source&nbsp;code</a></span>
             
           </td>
         </tr>
@@ -351,21 +379,28 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'0.2.0'">'0.2.0'</code>
+        <a name="VERSION"></a><span class="summary-name">VERSION</span> = <code title="'0.3.0'"><code class="variable-quote">'</code><code class="variable-string">0.3.0</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="xg-module.html#defaultXgridHostname" class="summary-name">defaultXgridHostname</a> = <code title="os.environ.get('XGRID_CONTROLLER_HOSTNAME')">os.environ.get('XGRID_CONTROLLER_HOSTNA<code class="variable-ellipsis">...</code></code>
+        <a name="defaultXgridHostname"></a><span class="summary-name">defaultXgridHostname</span> = <code title="None">None</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="defaultXgridPassword"></a><span class="summary-name">defaultXgridPassword</span> = <code title="''">''</code>
+        <a name="defaultXgridPassword"></a><span class="summary-name">defaultXgridPassword</span> = <code title="''"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="None">None</code>
     </td>
   </tr>
 </table>
@@ -387,6 +422,32 @@
   </td>
 </tr>
 </table>
+<a name="autorelease"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">autorelease</span>(<span class="sig-arg">func</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="xg-pysrc.html#autorelease">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>A decorator to properly release ObjC object instances.</p>
+  <p>Anytime an ObjC object instance is created, an NSAutoReleasePool needs
+  to be available. PyObjC will create one but it won't get drained very 
+  often.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>func</code></strong> - The function to be decorated.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="xgridParse"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -394,7 +455,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">xgridParse</span>(<span class="sig-arg">cmd</span>=<span class="sig-default">&quot;xgrid -grid list&quot;</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">xgridParse</span>(<span class="sig-arg">cmd</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">xgrid -grid list</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="xg-pysrc.html#xgridParse">source&nbsp;code</a></span>&nbsp;
@@ -414,40 +475,24 @@
   </dl>
 </td></tr></table>
 </div>
-<br />
-<!-- ==================== VARIABLES DETAILS ==================== -->
-<a name="section-VariablesDetails"></a>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td colspan="2" class="table-header">
-    <table border="0" cellpadding="0" cellspacing="0" width="100%">
-      <tr valign="top">
-        <td align="left"><span class="table-header">Variables Details</span></td>
-        <td align="right" valign="top"
-         ><span class="options">[<a href="#section-VariablesDetails"
-         class="privatelink" onclick="toggle_private();"
-         >hide private</a>]</span></td>
-      </tr>
-    </table>
-  </td>
-</tr>
-</table>
-<a name="defaultXgridHostname"></a>
+<a name="detectPlatform"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">defaultXgridHostname</h3>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">detectPlatform</span>()</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="xg-pysrc.html#detectPlatform">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
   
+  <p>Detect the version of Mac OS.</p>
   <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-os.environ.get('XGRID_CONTROLLER_HOSTNAME')
-</pre></td></tr></table>
-</dd>
+    <dt>Returns: float</dt>
+        <dd>Platform version</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -478,7 +523,7 @@ os.environ.get('XGRID_CONTROLLER_HOSTNAME')
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Jan 11 14:48:47 2010
+    Generated by Epydoc 3.0.1 on Fri Feb 12 11:38:34 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

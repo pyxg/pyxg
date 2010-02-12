@@ -56,6 +56,13 @@
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class Job</h1><p class="nomargin-top"><span class="codelink"><a href="xg-pysrc.html#Job">source&nbsp;code</a></span></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">Job</strong>
+</pre>
+
+<hr />
 <p>A class for working with an Xgrid job.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
@@ -82,7 +89,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="xg.Job-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">jobID</span>=<span class="summary-sig-default">u'999999999'</span>,
+        <span class="summary-sig-arg">jobID</span>=<span class="summary-sig-default"><code class="variable-quote">u'</code><code class="variable-string">999999999</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">connection</span>=<span class="summary-sig-default">None</span>)</span><br />
       An Xgrid job class.</td>
           <td align="right" valign="top">
@@ -220,12 +227,12 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="xg.Job-class.html#results" class="summary-sig-name">results</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">stdout</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">outdir</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">stderr</span>=<span class="summary-sig-default">''</span>,
+        <span class="summary-sig-arg">stdout</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">outdir</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">stderr</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">block</span>=<span class="summary-sig-default">10</span>,
         <span class="summary-sig-arg">silent</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Retrive the results of an Xgrid job.</td>
+      Retrieve the results of an Xgrid job.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="xg-pysrc.html#Job.results">source&nbsp;code</a></span>
             
@@ -243,11 +250,12 @@
         <tr>
           <td><span class="summary-sig"><a href="xg.Job-class.html#submit" class="summary-sig-name">submit</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">cmd</span>,
-        <span class="summary-sig-arg">args</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">stdin</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">indir</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">email</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default">u'0'</span>)</span><br />
+        <span class="summary-sig-arg">args</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">stdin</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">indir</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">email</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">silent</span>=<span class="summary-sig-default">False</span>)</span><br />
       Submits a single task job to the specified grid.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="xg-pysrc.html#Job.submit">source&nbsp;code</a></span>
@@ -266,7 +274,7 @@
         <tr>
           <td><span class="summary-sig"><a href="xg.Job-class.html#batch" class="summary-sig-name">batch</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">specification</span>,
-        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default">u'0'</span>,
+        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">silent</span>=<span class="summary-sig-default">False</span>)</span><br />
       Submits a batch job to the specified grid.</td>
           <td align="right" valign="top">
@@ -387,7 +395,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="__repr__"></a><span class="summary-sig-name">__repr__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a href="xg.Job-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      repr(x)</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="xg-pysrc.html#Job.__repr__">source&nbsp;code</a></span>
             
@@ -432,6 +441,48 @@
       
     </td>
   </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
 </table>
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
@@ -459,7 +510,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">jobID</span>=<span class="sig-default">u'999999999'</span>,
+        <span class="sig-arg">jobID</span>=<span class="sig-default"><code class="variable-quote">u'</code><code class="variable-string">999999999</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">connection</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
@@ -491,6 +542,9 @@
         <li><strong class="pname"><code>connection</code></strong> (Connection) - Instance of Connection class.  If empty a default Connection 
           object is used.</li>
     </ul></dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
   </dl>
 </td></tr></table>
 </div>
@@ -511,7 +565,7 @@
   
   <p>Return the Xgrid job specification.</p>
   <p>The Xgrid job specification is the dictionary that Xgrid uses to 
-  submit the job.  It contains keys that describe the command arguments, 
+  submit the job. It contains keys that describe the command arguments, 
   directories, etc.</p>
   <dl class="fields">
   </dl>
@@ -534,7 +588,7 @@
   
   <p>Return the current status information about a job.</p>
   <p>The job info is a dictionary of keys describing the current state of 
-  the job.  This includes start/stop dates, name, etc.</p>
+  the job. This includes start/stop dates, name, etc.</p>
   <p>The method printInfo() prints the info() dictionary in a nice 
   form.</p>
   <dl class="fields">
@@ -555,9 +609,9 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">results</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">stdout</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">outdir</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">stderr</span>=<span class="sig-default">''</span>,
+        <span class="sig-arg">stdout</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">outdir</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">stderr</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">block</span>=<span class="sig-default">10</span>,
         <span class="sig-arg">silent</span>=<span class="sig-default">False</span>)</span>
   </h3>
@@ -566,30 +620,30 @@
     </td>
   </tr></table>
   
-  <p>Retrive the results of an Xgrid job.</p>
+  <p>Retrieve the results of an Xgrid job.</p>
   <p>This method provides both a blocking and nonblocking method of getting
-  the results of an Xgrid job.  The job does not need to be completed to 
-  retrieve the results.  Because of this, the results method can be used to
-  get partial results while the job continues to run.  It can also 
+  the results of an Xgrid job. The job does not need to be completed to 
+  retrieve the results. Because of this, the results method can be used to 
+  get partial results while the job continues to run. It can also 
   automatically name output files.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>stdout</code></strong> (str) - The local file in which to put the stdout stream of the remote 
           job. If this is empty, the method will automatically generate a 
-          name in the local directory of the form: xgridjob-jobID.out.  
-          This file always is placed in the cwd rather than the outdir</li>
+          name in the local directory of the form: xgridjob-jobID.out. This
+          file always is placed in the cwd rather than the outdir</li>
         <li><strong class="pname"><code>stderr</code></strong> (str) - The local file in which to put the stderr stream of the remote 
           job. If this is empty, the method will automatically generate a 
           name in the local directory of the form: xgridjob-jobID.err.</li>
         <li><strong class="pname"><code>outdir</code></strong> (str) - The local directory in which to put the files retrieved from the 
-          remote job.  This is only for files other than the stdout and 
-          stderr files.  When empty, the other files are not brought back. 
+          remote job. This is only for files other than the stdout and 
+          stderr files. When empty, the other files are not brought back. 
           This is to prevent any accidental overwrites of results.</li>
-        <li><strong class="pname"><code>block</code></strong> (int) - Whether or not to block until the job is finished.  If block=0, 
+        <li><strong class="pname"><code>block</code></strong> (int) - Whether or not to block until the job is finished. If block=0, 
           partially completed results are retrieved and the job will 
-          continue to run.  If block &gt; 0, the job status is queried 
-          every block seconds and the results are returned when the job is 
+          continue to run. If block &gt; 0, the job status is queried every
+          block seconds and the results are returned when the job is 
           completed.</li>
         <li><strong class="pname"><code>silent</code></strong> (boolean) - Silence all messages.</li>
     </ul></dd>
@@ -605,11 +659,12 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">submit</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">cmd</span>,
-        <span class="sig-arg">args</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">stdin</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">indir</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">email</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">gridID</span>=<span class="sig-default">u'0'</span>)</span>
+        <span class="sig-arg">args</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">stdin</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">indir</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">email</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">gridID</span>=<span class="sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">silent</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="xg-pysrc.html#Job.submit">source&nbsp;code</a></span>&nbsp;
@@ -624,8 +679,8 @@
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>cmd</code></strong> (str) - The command the execute as a string.  The executable is not 
-          copied if the full path is given, otherwise it is.</li>
+        <li><strong class="pname"><code>cmd</code></strong> (str) - The command to execute as a string.  The executable is not copied
+          if the full path is given, otherwise it is.</li>
         <li><strong class="pname"><code>args</code></strong> (list or str) - The command line arguments to be passed to the command.</li>
         <li><strong class="pname"><code>stdin</code></strong> (str) - A local file to use as the stdin stream for the job.</li>
         <li><strong class="pname"><code>indir</code></strong> (str) - A local directory to copy to the remote agent.</li>
@@ -633,6 +688,7 @@
           changes.</li>
         <li><strong class="pname"><code>gridID</code></strong> (unicode, str or int) - The identifier of the Grid to which the job will be submitted. If
           empty, the default grid u'0' is used.</li>
+        <li><strong class="pname"><code>silent</code></strong> (boolean) - If set to True will slience all messages.</li>
     </ul></dd>
     <dt>Returns: Job</dt>
         <dd>Initialized Job object for sumbitted job.</dd>
@@ -648,7 +704,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">batch</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">specification</span>,
-        <span class="sig-arg">gridID</span>=<span class="sig-default">u'0'</span>,
+        <span class="sig-arg">gridID</span>=<span class="sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">silent</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -658,13 +714,13 @@
   
   <p>Submits a batch job to the specified grid.</p>
   <p>This is a nonblocking job submission method used for submitting 
-  complex multi-task jobs.  For single task jobs, use submit().</p>
+  complex multi-task jobs. For single task jobs, use submit().</p>
   <p>To retrieve job results, use the results() method.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>specification</code></strong> (JobSpecification) - The job specification of the job, which must be an instance of 
-          the JobSpecification class.  See the docstring for 
+          the JobSpecification class. See the docstring for 
           JobSpecification for more details.</li>
         <li><strong class="pname"><code>gridID</code></strong> (unicode, str or int) - The identifier of the Grid to which the job will be submitted. If
           empty, the default grid u'0' is used.</li>
@@ -700,6 +756,30 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="__repr__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__repr__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Representation operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="xg-pysrc.html#Job.__repr__">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>repr(x)</p>
+  <dl class="fields">
+    <dt>Overrides:
+        object.__repr__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
 <br />
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
@@ -727,7 +807,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Jan 11 14:48:47 2010
+    Generated by Epydoc 3.0.1 on Fri Feb 12 11:38:34 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

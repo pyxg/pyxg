@@ -57,8 +57,12 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class Controller</h1><p class="nomargin-top"><span class="codelink"><a href="xg-pysrc.html#Controller">source&nbsp;code</a></span></p>
 <pre class="base-tree">
+ object --+    
+          |    
  <a href="xg.JobManager-class.html">JobManager</a> --+
               |
+ object --+   |
+          |   |
 <a href="xg.GridManager-class.html">GridManager</a> --+
               |
              <strong class="uidshort">Controller</strong>
@@ -128,11 +132,11 @@
         <tr>
           <td><span class="summary-sig"><a href="xg.Controller-class.html#submit" class="summary-sig-name">submit</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">cmd</span>,
-        <span class="summary-sig-arg">args</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">stdin</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">indir</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">email</span>=<span class="summary-sig-default">''</span>,
-        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default">u'0'</span>)</span><br />
+        <span class="summary-sig-arg">args</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">stdin</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">indir</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">email</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>)</span><br />
       Submits a single task job to the specified grid.</td>
           <td align="right" valign="top">
             <span class="codelink"><a href="xg-pysrc.html#Controller.submit">source&nbsp;code</a></span>
@@ -151,7 +155,7 @@
         <tr>
           <td><span class="summary-sig"><a href="xg.Controller-class.html#batch" class="summary-sig-name">batch</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">specification</span>,
-        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default">u'0'</span>,
+        <span class="summary-sig-arg">gridID</span>=<span class="summary-sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">silent</span>=<span class="summary-sig-default">False</span>)</span><br />
       Submits a batch job to the specified grid.</td>
           <td align="right" valign="top">
@@ -189,6 +193,45 @@
     <div class="private">    <p class="indent-wrapped-lines"><b>Inherited from <code><a href="xg.GridManager-class.html">GridManager</a></code></b> (private):
       <code><a href="xg.GridManager-class.html#_updateGrids" onclick="show_private();">_updateGrids</a></code>
       </p></div>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Properties</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Properties"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
     </td>
   </tr>
 </table>
@@ -269,7 +312,7 @@
           controller.</li>
     </ul></dd>
     <dt>Overrides:
-        <a href="xg.GridManager-class.html#__init__">GridManager.__init__</a>
+        object.__init__
     </dt>
   </dl>
 </td></tr></table>
@@ -283,11 +326,11 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">submit</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">cmd</span>,
-        <span class="sig-arg">args</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">stdin</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">indir</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">email</span>=<span class="sig-default">''</span>,
-        <span class="sig-arg">gridID</span>=<span class="sig-default">u'0'</span>)</span>
+        <span class="sig-arg">args</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">stdin</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">indir</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">email</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">gridID</span>=<span class="sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     ><span class="codelink"><a href="xg-pysrc.html#Controller.submit">source&nbsp;code</a></span>&nbsp;
@@ -327,7 +370,7 @@
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">batch</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">specification</span>,
-        <span class="sig-arg">gridID</span>=<span class="sig-default">u'0'</span>,
+        <span class="sig-arg">gridID</span>=<span class="sig-default"><code class="variable-quote">u'</code><code class="variable-string">0</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">silent</span>=<span class="sig-default">False</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -382,7 +425,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Jan 11 14:48:47 2010
+    Generated by Epydoc 3.0.1 on Fri Feb 12 11:38:34 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
