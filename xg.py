@@ -123,6 +123,7 @@ except ImportError, e:
 class XgridError(Exception):
     """Xgrid exception class."""
     def __init__(self, err):
+        Exception.__init__(self)
         self.err = err
     def __repr__(self):
         return "Xgrid Error: %s" % (self.err)
@@ -130,6 +131,7 @@ class XgridError(Exception):
 class InvalidIdentifier(XgridError):
     """Xgrid exception for invalid job or grid identifiers."""
     def __init__(self, id):
+        XGridError.__init__(self, err)
         self.id = id
     def __repr__(self):
         return "Invalid Xgrid Identifier: " + str(self.id)
@@ -159,7 +161,7 @@ class InvalidIdentifierType(Exception):
         return "Invalid Xgrid Identifier Type: " + str(self.bad_var)
 
 # Setting this flag causes printing of every Xgrid command that is executed
-PYXGRID_DEBUG = False
+PYXGRID_DEBUG = True
 VERSION = '0.3.0'
 
 #####################################################################
@@ -290,7 +292,7 @@ def detectPlatform():
 #####################################################################
 
 class Connection(object):
-    """Track information needed to connect to an XGrid controller."""
+    """Track information needed to connect to an Xgrid controller."""
     
     def __init__(self, hostname=0, password=0, kerberos=False):
         """Create a Connection object to be passed to other objects.
@@ -1356,7 +1358,8 @@ class JobSpecification(object):
         return self._jobDict[u'schedulerParameters'].get(u'minimumTaskCount')
         
     def setDependsOnJobs(self, jobArray):
-        """Takes a list of Xgrid job ids that must complete before this job begins."""
+        """Takes a list of Xgrid job ids that must complete before this job
+            begins."""
         #self._checkSchedulerParameters()
         self._jobDict[u'schedulerParameters'][u'dependsOnJobs'] = \
             [unicode(j) for j in jobArray]
