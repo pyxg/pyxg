@@ -915,7 +915,6 @@ class Grid(JobManager):
 class Job(object):
     """A class for working with an Xgrid job."""
 
-    @autorelease
     def __init__(self, jobID=u'999999999', connection=None):
         """An Xgrid job class.
         
@@ -959,7 +958,7 @@ class Job(object):
         result = xgridParse(cmd)
         self._checkJobID(result)
         self._info = result['jobAttributes']
-        
+
     def _updateSpecification(self):
         cmd = 'xgrid %s-job specification -id %s' % \
             (self._connection.connectString(), self.jobID)
@@ -1166,7 +1165,7 @@ class Job(object):
         if not silent:
             print "Job submitted with id: ", self.jobID
         return self.jobID
-        
+
     def batch(self, specification, gridID=u'0', silent=False):
         """Submits a batch job to the specified grid.
         
@@ -1213,7 +1212,7 @@ class Job(object):
 
 
     # Job control methods
-            
+
     def perform(self, action):
         """Performs an action on a job.
         
