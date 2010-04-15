@@ -252,7 +252,7 @@ def xgridParse(cmd="xgrid -grid list"):
     # Check for good exit status (0) and parse output
     if result[0] == 0:
         if result[1]:
-            if detectPlatform < 10.6:
+            if detectPlatform() < 10.6:
                 return NSString.stringWithString_(result[1]).xGridPropertyList()
             else:
                 return NSString.stringWithString_(result[1]).propertyList()
@@ -910,10 +910,12 @@ class Grid(JobManager):
     def __repr__(self):
         result = '<Grid with gridID = %s>' % self.gridID
         return result
-        
+
+
 class Job(object):
     """A class for working with an Xgrid job."""
-    
+
+    @autorelease
     def __init__(self, jobID=u'999999999', connection=None):
         """An Xgrid job class.
         
@@ -1288,7 +1290,7 @@ class Job(object):
         
 class JobSpecification(object):
     """A class used for constructing multi-task batch jobs."""
-    
+
     def __init__(self):
         """This class is used to setup the plist file for multi-task jobs.
         """
