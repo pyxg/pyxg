@@ -159,7 +159,7 @@ class InvalidIdentifierType(Exception):
         return "Invalid Xgrid Identifier Type: " + str(self.bad_var)
 
 # Setting this flag causes printing of every Xgrid command that is executed
-PYXGRID_DEBUG = True
+PYXGRID_DEBUG = False
 VERSION = '0.3.0'
 
 #####################################################################
