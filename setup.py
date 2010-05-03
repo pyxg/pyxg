@@ -8,6 +8,6 @@ setup(name='PyXG',
     description='A Python interface to Xgrid',
     author='Brian Granger/Barry Wark/Beat Rupp',
     author_email='ellisonbg@gmail.com',
-    url='http://pyxg.scipy.org',
+    url='http://launchpad.net/pyxg',
     py_modules=['xg']
     )

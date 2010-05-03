@@ -7,7 +7,7 @@
 
 # PyXG-0.3.0
 
-"""PyXG provides a python interface to Apple's Xgrid.  
+"""PyXG provides a Python interface to Apple's Xgrid.
 
 Xgrid is Apple's software for building and managing clusters of 
 Macintosh computers for use in high performance computation.  
@@ -16,18 +16,18 @@ See U{http://www.apple.com/server/macosx/technology/xgrid.html} for more details
 This module wraps the xgrid command line in Mac OS X. It will not work with
 the Technonogy Previews of Xgrid. The command line is wrapped in this module 
 as the goal is to provide an interface to Xgrid that can be used from an
-interactive python prompt. The Cocoa API for Xgrid (XgridFoundation) is 
+interactive Python prompt. The Cocoa API for Xgrid (XgridFoundation) is
 based on an event-loop paradigm and is less well suited for interactive work.
-If you want to use Xgrid and python from within a Cocoa application, you should
+If you want to use Xgrid and Python from within a Cocoa application, you should
 use XgridFoundation and PyObjC.
 
 Features
 ========
 
-    1.  Use Xgrid from within python scripts as well as in interactive python
+    1.  Use Xgrid from within Python scripts as well as in interactive Python
         sessions.
     2.  Create, submit and manage simple (one task) and batch (many task) Xgrid
-        jobs using python's elegant syntax.
+        jobs using Python's elegant syntax.
     3.  Work with multiple Xgrid controllers simultaneouly.
     4.  List available grids for each controller and query their status.
 
@@ -173,14 +173,17 @@ if not defaultXgridPassword:
     defaultXgridPassword = ''
 
 #####################################################################
-# Utilities for running and parsing Xgrid commands                  #
+# Utilities: memory management, running & parsing Xgrid commands    #
 ##################################################################### 
 
 def autorelease(func):
     """A decorator to properly release ObjC object instances.
     
     Anytime an ObjC object instance is created, an NSAutoReleasePool needs to
-    be available. PyObjC will create one but it won't get drained very often.
+    be available. PyObjC will create one but it won't get drained very often in
+    Mac OS X Leopard (10.5) and earlier. This is especially a problem if many
+    PyXG jobs are created within a loop. In order to prevent memory leaking, the
+    call(s) to PyXG within the loop should be decorated with this decorator.
     
     @param func: The function to be decorated.
     """
@@ -232,13 +235,13 @@ def xgridParse(cmd="xgrid -grid list"):
     
     The output of the xgrid CLI is a (sometimes illegal) old-style plist.
     This function runs an xgrid command and parses the output of the command
-    into a valid NSDictionary (a python dict).
+    into a valid NSDictionary (a Python dict).
   
     To handle the illegal plists returned by the xgrid CLI, we use the
     xGridPropertyList: method of NSString (defined above).
 
     See the xgrid man pages for details on the xgrid command.
-    This fuction will return a nested python structure that
+    This fuction will return a nested Python structure that
     reflects the output of the xgrid command.
     """
 
@@ -496,7 +499,7 @@ class JobManager(object):
             actions are stop, resume, delete, restart, and suspend.
         @type action: str
         @arg jobIDs:  Jobs to perform the action on.  
-        @type jobIDs:  Either the string 'all' or a python sequence of 
+        @type jobIDs:  Either the string 'all' or a Python sequence of
             job identifiers.
         """
         
