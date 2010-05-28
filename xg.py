@@ -183,7 +183,7 @@ def autorelease(func):
     be available. PyObjC will create one but it won't get drained very often in
     Mac OS X Leopard (10.5) and earlier. This is especially a problem if many
     PyXG jobs are created within a loop. In order to prevent memory leaking, the
-    call(s) to PyXG within the loop should be decorated with this decorator.
+    call to PyXG within the loop should be decorated with this decorator.
     
     @param func: The function to be decorated.
     """
