@@ -1,2 +1,4 @@
 nbproject
 .figleaf
+*.pyc
+
