@@ -1,0 +1,5 @@
+include doc/html/*
+include setup.py
+include xg.py
+include *.txt
+include *.rst
