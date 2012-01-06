@@ -365,9 +365,11 @@ class Connection(object):
         if (self.kerberos):
             self._connectString = '%s-auth Kerberos ' % self._connectString
         else:
-            if self.password:
-                self._connectString = '%s-p %s ' % \
+            if self.password != '':
+                self._connectString = '%s -p %s ' % \
                     (self._connectString, self.password)
+            else:
+                self._connectString = '%s -p \\\'\\\' ' % self._connectString
                     
     def connectString(self):
         """Returns the connection string to be used in Xgrid commands."""
